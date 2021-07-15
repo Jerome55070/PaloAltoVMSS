@@ -16,10 +16,22 @@
                  "description": "The IP address that you want to use to access the management interface on the firewall(s). This IP address will be added to the inbound NSG on eth0(MGMT) to restrict access."
              }
         },
-        "fwLoadBalancerIP": {
+        "fwLoadBalancerIP_01": {
             "type": "string",
             "metadata": {
-                "description": "IP Address of the Internal Load Balancer in front of the firewall. This should be an IP in the Untrust subnet."
+                "description": "IP Address of the Internal Load Balancer in front of the firewall. This should be an IP in the Inbound subnet."
+            }
+        },
+        "fwLoadBalancerIP_02": {
+            "type": "string",
+            "metadata": {
+                "description": "IP Address of the Internal Load Balancer in front of the firewall. This should be an IP in the data subnet."
+            }
+        },
+        "fwLoadBalancerIP_03": {
+            "type": "string",
+            "metadata": {
+                "description": "IP Address of the Internal Load Balancer in front of the firewall. This should be an IP in the mgmt subnet."
             }
         },
         "deployIntoExistingVnet": {
@@ -493,7 +505,7 @@
                     {
                         "name": "fw-inbound-frontend",
                         "properties": {
-                            "privateIPAddress": "[parameters('fwLoadBalancerIP')]",
+                            "privateIPAddress": "[parameters('fwLoadBalancerIP_01')]",
                             "privateIPAllocationMethod": "Static",
                             "subnet": {
                                 "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworkName'), variables('untrustedSubnetName'))]"
@@ -504,7 +516,7 @@
                     {
                         "name": "fw-data-frontend",
                         "properties": {
-                            "privateIPAddress": "[parameters('fwLoadBalancerIP')]",
+                            "privateIPAddress": "[parameters('fwLoadBalancerIP_02')]",
                             "privateIPAllocationMethod": "Static",
                             "subnet": {
                                 "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworkName'), variables('trustedSubnetName'))]"
@@ -515,7 +527,7 @@
                     {
                         "name": "fw-mgmt-frontend",
                         "properties": {
-                            "privateIPAddress": "[parameters('fwLoadBalancerIP')]",
+                            "privateIPAddress": "[parameters('fwLoadBalancerIP_03')]",
                             "privateIPAllocationMethod": "Static",
                             "subnet": {
                                 "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworkName'), variables('mgmtSubnetName'))]"
@@ -738,9 +750,17 @@
             "value": "[variables('trustedSubnetName')]",
             "type": "string"
         },
-        "InboundFwLoadBalancerIP": {
-            "value": "[parameters('fwLoadBalancerIP')]",
+        "InboundFwLoadBalancerIP_01": {
+            "value": "[parameters('fwLoadBalancerIP_01')]",
             "type": "string"
-        }
+        },
+        "InboundFwLoadBalancerIP_02": {
+            "value": "[parameters('fwLoadBalancerIP_02')]",
+            "type": "string"
+        },
+        "InboundFwLoadBalancerIP_03": {
+            "value": "[parameters('fwLoadBalancerIP_03')]",
+            "type": "string"
+        }        
     }
 }
