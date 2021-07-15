@@ -584,8 +584,7 @@
                         "name": "fw-data-lb-rule",
                         "properties": {
                             "frontendIPConfiguration": {
-
-                                "id": "[concat(resourceId('Microsoft.Network/loadBalancers', variables('fwLbName')), '/frontendIPConfigurations/LoadBalancerFrontEnd')]"
+                                "id": "[resourceId('Microsoft.Network/loadBalancers/frontendIPConfigurations', variables('fwLbName'), 'fw-data-frontend')]"
                             },
                             "frontendPort": 0,
                             "backendPort": 0,
@@ -595,7 +594,7 @@
                             "loadDistribution": "Default",
                             "disableOutboundSnat": false,
                             "backendAddressPool": {
-                                "id": "[concat(resourceId('Microsoft.Network/loadBalancers', variables('fwLbName')),'/backendAddressPools/', variables('trustedSubnetName'))]"
+                                "id": "[resourceId('Microsoft.Network/loadBalancers/backendAddressPools', variables('fwLbName'), 'fw-data-backend-pool'])"
                             },
                             "probe": {
                                 "id": "[concat(resourceId('Microsoft.Network/loadBalancers', variables('fwLbName')),'/probes/fw_data_health_probe')]"
@@ -606,8 +605,7 @@
                         "name": "fw-mgmt-lb-rule",
                         "properties": {
                             "frontendIPConfiguration": {
-
-                                "id": "[concat(resourceId('Microsoft.Network/loadBalancers', variables('fwLbName')), '/frontendIPConfigurations/LoadBalancerFrontEnd')]"
+                                "id": "[resourceId('Microsoft.Network/loadBalancers/frontendIPConfigurations', variables('fwLbName'), 'fw-mgmt-frontend')]"
                             },
                             "frontendPort": 0,
                             "backendPort": 0,
@@ -617,7 +615,7 @@
                             "loadDistribution": "Default",
                             "disableOutboundSnat": false,
                             "backendAddressPool": {
-                                "id": "[concat(resourceId('Microsoft.Network/loadBalancers', variables('fwLbName')),'/backendAddressPools/', variables('MgmtSubnetName'))]"
+                                "id": "[resourceId('Microsoft.Network/loadBalancers/backendAddressPools', variables('fwLbName'), 'fw-mgmt-backend-pool'])"
                             },
                             "probe": {
                                 "id": "[concat(resourceId('Microsoft.Network/loadBalancers', variables('fwLbName')),'/probes/fw_mgmt_health_probe')]"
@@ -628,8 +626,7 @@
                         "name": "fw-inbound-lb-rule",
                         "properties": {
                             "frontendIPConfiguration": {
-
-                                "id": "[concat(resourceId('Microsoft.Network/loadBalancers', variables('fwLbName')), '/frontendIPConfigurations/LoadBalancerFrontEnd')]"
+                                "id": "[resourceId('Microsoft.Network/loadBalancers/frontendIPConfigurations', variables('fwLbName'), 'fw-inbound-frontend')]"
                             },
                             "frontendPort": 0,
                             "backendPort": 0,
@@ -639,7 +636,7 @@
                             "loadDistribution": "Default",
                             "disableOutboundSnat": false,
                             "backendAddressPool": {
-                                "id": "[concat(resourceId('Microsoft.Network/loadBalancers', variables('fwLbName')),'/backendAddressPools/', variables('untrustedSubnetName'))]"
+                                "id": "[resourceId('Microsoft.Network/loadBalancers/backendAddressPools', variables('fwLbName'), 'fw-inbound-backend-pool')]"
                             },
                             "probe": {
                                 "id": "[concat(resourceId('Microsoft.Network/loadBalancers', variables('fwLbName')),'/probes/fw_inbound_health_probe')]"
