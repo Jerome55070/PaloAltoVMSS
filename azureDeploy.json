@@ -594,7 +594,7 @@
                             "loadDistribution": "Default",
                             "disableOutboundSnat": false,
                             "backendAddressPool": {
-                                "id": "[resourceId('Microsoft.Network/loadBalancers/backendAddressPools', variables('fwLbName'), 'fw-data-backend-pool'])"
+                                "id": "[resourceId('Microsoft.Network/loadBalancers/backendAddressPools', variables('fwLbName'), 'fw-data-backend-pool')]"
                             },
                             "probe": {
                                 "id": "[concat(resourceId('Microsoft.Network/loadBalancers', variables('fwLbName')),'/probes/fw_data_health_probe')]"
@@ -615,7 +615,7 @@
                             "loadDistribution": "Default",
                             "disableOutboundSnat": false,
                             "backendAddressPool": {
-                                "id": "[resourceId('Microsoft.Network/loadBalancers/backendAddressPools', variables('fwLbName'), 'fw-mgmt-backend-pool'])"
+                                "id": "[resourceId('Microsoft.Network/loadBalancers/backendAddressPools', variables('fwLbName'), 'fw-mgmt-backend-pool')]"
                             },
                             "probe": {
                                 "id": "[concat(resourceId('Microsoft.Network/loadBalancers', variables('fwLbName')),'/probes/fw_mgmt_health_probe')]"
