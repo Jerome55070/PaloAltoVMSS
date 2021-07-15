@@ -499,12 +499,7 @@
                                 "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworkName'), variables('untrustedSubnetName'))]"
                             },
                             "privateIPAddressVersion": "IPv4"
-                        },
-                        "zones": [
-                            "1",
-                            "2",
-                            "3"
-                        ]
+                        }
                     },
                     {
                         "name": "fw-data-frontend",
@@ -515,12 +510,7 @@
                                 "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworkName'), variables('trustedSubnetName'))]"
                             },
                             "privateIPAddressVersion": "IPv4"
-                        },
-                        "zones": [
-                            "1",
-                            "2",
-                            "3"
-                        ]
+                        }
                     },
                     {
                         "name": "fw-mgmt-frontend",
@@ -531,12 +521,7 @@
                                 "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworkName'), variables('mgmtSubnetName'))]"
                             },
                             "privateIPAddressVersion": "IPv4"
-                        },
-                        "zones": [
-                            "1",
-                            "2",
-                            "3"
-                        ]
+                        }
                     }
                 ],
                 "backendAddressPools": [
