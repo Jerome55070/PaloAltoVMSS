@@ -484,6 +484,9 @@
                     },
                     "appGwBackendPoolName": {
                         "value": "[variables('appGwBackendPoolName')]"
+                    },
+                    "appGwToInboundLoadBalancerIP": {
+                        "value": "[parameters('fwLoadBalancerIP_01')]"
                     }
                 }
             }

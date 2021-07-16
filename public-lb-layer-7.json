@@ -54,6 +54,12 @@
             "metadata": {
                 "description": "Backend Pool Name for the App Gateway"
             }
+        },
+        "appGwToInboundLoadBalancerIP": {
+            "type": "string",
+            "metadata": {
+                "description": "Load Balancer Inbound IP Address"
+            }
         }
     },
     "variables": {
@@ -126,6 +132,11 @@
                     {
                         "name": "[parameters('appGwBackendPoolName')]",
                         "properties": {
+                            "backendAddresses": [
+                                {                         
+                                "ipAddress": "[parameters('appGwToInboundLoadBalancerIP')]"
+                                }
+                            ]
                         }
                     }
                 ],
