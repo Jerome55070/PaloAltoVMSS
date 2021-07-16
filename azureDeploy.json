@@ -19,19 +19,19 @@
         "fwLoadBalancerIP_01": {
             "type": "string",
             "metadata": {
-                "description": "IP Address of the Internal Load Balancer in front of the firewall. This should be an IP in the Inbound subnet."
+                "description": "IP Address of the Internal Load Balancer in front of the firewall. This should be an IP in the Inbound subnet (Untrust Subnet)."
             }
         },
         "fwLoadBalancerIP_02": {
             "type": "string",
             "metadata": {
-                "description": "IP Address of the Internal Load Balancer in front of the firewall. This should be an IP in the data subnet."
+                "description": "IP Address of the Internal Load Balancer in front of the firewall. This should be an IP in the data subnet (Trust Subnet)."
             }
         },
         "fwLoadBalancerIP_03": {
             "type": "string",
             "metadata": {
-                "description": "IP Address of the Internal Load Balancer in front of the firewall. This should be an IP in the mgmt subnet."
+                "description": "IP Address of the Internal Load Balancer in front of the firewall. This should be an IP in the mgmt subnet (Mgmt Subnet)."
             }
         },
         "deployIntoExistingVnet": {
