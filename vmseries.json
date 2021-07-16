@@ -122,18 +122,21 @@
         },
         "fwLbBePoolName_1": {
             "type": "string",
+            "defaultValue": "fw-mgmt-backend-pool",
             "metadata": {
                 "description": "Application Gateway Backend Pool Name"
             }
         },
         "fwLbBePoolName_2": {
             "type": "string",
+            "defaultValue": "fw-inbound-backend-pool",
             "metadata": {
                 "description": "Application Gateway Backend Pool Name"
             }
         },
         "fwLbBePoolName_3": {
             "type": "string",
+            "defaultValue": "fw-data-backend-pool",
             "metadata": {
                 "description": "Application Gateway Backend Pool Name"
             }
