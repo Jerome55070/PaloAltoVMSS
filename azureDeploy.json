@@ -706,13 +706,16 @@
                         "value": "[variables('fwLbName')]"
                     },
                     "fwLbBePoolName_1": {
-                        "value": "[variables('fwLbBePoolName_1')]"
+//                        "value": "[variables('fwLbBePoolName_1')]"
+                        "value": "fw-mgmt-backend-pool"
                     },
                     "fwLbBePoolName_2": {
-                        "value": "[variables('fwLbBePoolName_2')]"
+//                        "value": "[variables('fwLbBePoolName_2')]"
+                        "value": "fw-inbound-backend-pool"
                     },
                     "fwLbBePoolName_3": {
-                        "value": "[variables('fwLbBePoolName_3')]"
+ //                       "value": "[variables('fwLbBePoolName_3')]"
+                         "value": "fw-data-backend-pool"
                     },
                     "appInsightsName": {
                         "value": "[variables('appInsightsName')]"
