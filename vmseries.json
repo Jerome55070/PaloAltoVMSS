@@ -304,8 +304,8 @@
                                         },
                                         "loadBalancerBackendAddressPools": [
                                         {
-//                                          "id": "[concat('/subscriptions/', subscription().subscriptionId,'/resourceGroups/', resourceGroup().name, '/providers/Microsoft.Network/loadBalancers/', parameters('fwLbName'), '/backendAddressPools/', 'fw-mgmt-backend-pool')]"
-                                            "id": "[resourceId('Microsoft.Network/loadBalancers/backendAddressPools', variables('fwLbName'), 'fw-mgmt-backend-pool')]"
+                                          "id": "[concat('/subscriptions/', subscription().subscriptionId,'/resourceGroups/', resourceGroup().name, '/providers/Microsoft.Network/loadBalancers/', parameters('fwLbName'), '/backendAddressPools/', 'fw-mgmt-backend-pool')]"
+//                                            "id": "[resourceId('Microsoft.Network/loadBalancers/backendAddressPools', variables('fwLbName'), 'fw-mgmt-backend-pool')]"
                                         }],   
                                         "publicIPAddressConfiguration": {
                                             "name": "pavm_pip",
@@ -331,8 +331,8 @@
                                         },
                                         "loadBalancerBackendAddressPools": [
                                         {
-//                                            "id": "[concat('/subscriptions/', subscription().subscriptionId,'/resourceGroups/', resourceGroup().name, '/providers/Microsoft.Network/loadBalancers/', parameters('fwLbName'), '/backendAddressPools/', 'fw-inbound-backend-pool')]"
-                                            "id": "[resourceId('Microsoft.Network/loadBalancers/backendAddressPools', variables('fwLbName'), 'fw-inbound-backend-pool')]"
+                                            "id": "[concat('/subscriptions/', subscription().subscriptionId,'/resourceGroups/', resourceGroup().name, '/providers/Microsoft.Network/loadBalancers/', parameters('fwLbName'), '/backendAddressPools/', 'fw-inbound-backend-pool')]"
+//                                           "id": "[resourceId('Microsoft.Network/loadBalancers/backendAddressPools', variables('fwLbName'), 'fw-inbound-backend-pool')]"
                                         }]
                                     }
                                 }]
@@ -352,8 +352,8 @@
                                         },
                                         "loadBalancerBackendAddressPools": [
                                         {
-//                                            "id": "[concat('/subscriptions/', subscription().subscriptionId,'/resourceGroups/', resourceGroup().name, '/providers/Microsoft.Network/loadBalancers/', parameters('fwLbName'), '/backendAddressPools/', 'fw-data-backend-pool')]"
-                                            "id": "[resourceId('Microsoft.Network/loadBalancers/backendAddressPools', variables('fwLbName'), 'fw-data-backend-pool')]"
+                                            "id": "[concat('/subscriptions/', subscription().subscriptionId,'/resourceGroups/', resourceGroup().name, '/providers/Microsoft.Network/loadBalancers/', parameters('fwLbName'), '/backendAddressPools/', 'fw-data-backend-pool')]"
+//                                            "id": "[resourceId('Microsoft.Network/loadBalancers/backendAddressPools', variables('fwLbName'), 'fw-data-backend-pool')]"
                                         }]                                        
                                     }
                                 }]
