@@ -301,7 +301,7 @@
                                         },
                                         "loadBalancerBackendAddressPools": [
                                         {
-                                            "id": "[concat('/subscriptions/', subscription().subscriptionId,'/resourceGroups/', resourceGroup().name, '/providers/Microsoft.Network/loadBalancers/', parameters('fwLbName'), '/backendAddressPools/', parameters('fwLbBePoolName_2'))]"
+                                            "id": "[concat('/subscriptions/', subscription().subscriptionId,'/resourceGroups/', resourceGroup().name, '/providers/Microsoft.Network/loadBalancers/', parameters('fwLbName'), '/backendAddressPools/', 'fw-mgmt-backend-pool')]"
                                         }],   
                                         "publicIPAddressConfiguration": {
                                             "name": "pavm_pip",
@@ -327,7 +327,7 @@
                                         },
                                         "loadBalancerBackendAddressPools": [
                                         {
-                                            "id": "[concat('/subscriptions/', subscription().subscriptionId,'/resourceGroups/', resourceGroup().name, '/providers/Microsoft.Network/loadBalancers/', parameters('fwLbName'), '/backendAddressPools/', parameters('fwLbBePoolName_3'))]"
+                                            "id": "[concat('/subscriptions/', subscription().subscriptionId,'/resourceGroups/', resourceGroup().name, '/providers/Microsoft.Network/loadBalancers/', parameters('fwLbName'), '/backendAddressPools/', 'fw-inbound-backend-pool')]"
                                         }]
                                     }
                                 }]
@@ -347,7 +347,7 @@
                                         },
                                         "loadBalancerBackendAddressPools": [
                                         {
-                                            "id": "[concat('/subscriptions/', subscription().subscriptionId,'/resourceGroups/', resourceGroup().name, '/providers/Microsoft.Network/loadBalancers/', parameters('fwLbName'), '/backendAddressPools/', parameters('fwLbBePoolName_1'))]"
+                                            "id": "[concat('/subscriptions/', subscription().subscriptionId,'/resourceGroups/', resourceGroup().name, '/providers/Microsoft.Network/loadBalancers/', parameters('fwLbName'), '/backendAddressPools/', 'fw-data-backend-pool')]"
                                         }]                                        
                                     }
                                 }]
