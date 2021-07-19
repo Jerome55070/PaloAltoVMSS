@@ -97,7 +97,7 @@
     },
     "variables": {
         "location": "[resourceGroup().location]",
-        "rgname": "RG-Prd-TestAutoScale",
+        "rgname": "[resourceGroup().id]",
         "vnetname": "[parameters('virtualNetworkName')]",
         "vnetID": "[resourceId('Microsoft.Network/virtualNetworks',variables('vnetname'))]",
         "subnet0Ref": "[concat(variables('vnetID'),'/subnets/',parameters('subnet0Name'))]",
